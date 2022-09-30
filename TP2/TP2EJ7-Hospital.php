@@ -30,18 +30,52 @@ $CantidadDías = readline("Cantidad de días: ");
 
 
 
-if ($Enfermedad == "1") {
+/*  NO FUNCIONA
+
+if ($Enfermedad = 1) {
     $CostoTotal = $CostoEnf1 * $CantidadDías;
-} elseif ($Enfermedad == "2") {
+} elseif ($Enfermedad = 2) {
     $CostoTotal = $CostoEnf2 * $CantidadDías;
-} elseif ($Enfermedad == "3") {
+} elseif ($Enfermedad = 3) {
     $CostoTotal = $CostoEnf3 * $CantidadDías;
-} elseif ($Enfermedad == "4") {
+} elseif ($Enfermedad = 4) {
     $CostoTotal = $CostoEnf4 * $CantidadDías;
-} else ; { // ($Enfermedad == "5")
+} else { // ($Enfermedad = "5")
     $CostoTotal = $CostoEnf5 * $CantidadDías;
 }
 
 echo " Por enfermedad $Enfermedad y la cantidad de $CantidadDías días: el Costo Total es $CostoTotal";
+
+*/
+
+// SI FUNCIONA
+
+
+switch ($Enfermedad) {
+    case 1:
+        $CostoTotal = $CostoEnf1 * $CantidadDías;
+        echo " Por enfermedad $Enfermedad y la cantidad de $CantidadDías días: el Costo Total es $CostoTotal";
+        break;
+    case 2:
+        $CostoTotal = $CostoEnf2 * $CantidadDías;
+        echo " Por enfermedad $Enfermedad y la cantidad de $CantidadDías días: el Costo Total es $CostoTotal";
+        break;
+    case 3:
+        $CostoTotal = $CostoEnf3 * $CantidadDías;
+        echo " Por enfermedad $Enfermedad y la cantidad de $CantidadDías días: el Costo Total es $CostoTotal";
+        break;
+    case 4:
+        $CostoTotal = $CostoEnf4 * $CantidadDías;
+        echo " Por enfermedad $Enfermedad y la cantidad de $CantidadDías días: el Costo Total es $CostoTotal";
+        break;
+    case 5:
+        $CostoTotal = $CostoEnf5 * $CantidadDías;
+        echo " Por enfermedad $Enfermedad y la cantidad de $CantidadDías días: el Costo Total es $CostoTotal";
+        break;
+    default:
+        echo "Enfermedad inexistente. Verifique número de enfermedad.";
+        break;
+
+}
 
 ?>
